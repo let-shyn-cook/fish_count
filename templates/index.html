@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Fish Detection</title>
+</head>
+<body>
+    <header>
+        <h1>Fish Detection System</h1>
+    </header>
+    <main>
+        <div id="controls">
+            <input type="file" id="file-input" style="display: none;">
+            <button id="choose-file">Choose File</button>
+            <button id="capture-image">Start Camera</button>
+            <button id="start-counting">Realtime (beta)</button>
+        </div>
+        <div id="drop-area">
+            <p>Drag & Drop your image here or click to select a file</p>
+        </div>
+        <div id="image-container">
+            <video id="video" autoplay></video>
+            <img id="image" style="display: none;">
+            <div id="fish-count-overlay">
+                Fish-count: <span id="realtime-count">0</span>
+            </div>
+        </div>
+        <div id="results">
+            Total Fish Count: <span id="total-fish-count">0</span>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Fish Detection System</p>
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

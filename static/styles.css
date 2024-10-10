@@ -1,0 +1,229 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #e0f7fa;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    background-color: #00838f;
+    color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+#image-container {
+    width: 100%;
+    height: 0;
+    padding-bottom: 75%;
+    position: relative;
+    overflow: hidden;
+    background-color: #000;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+#video, #image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+#fish-count-overlay {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(0, 131, 143, 0.8);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+#controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #00838f;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+button:hover {
+    background-color: #006064;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+button:disabled {
+    background-color: #b2dfdb;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+#results {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #00838f;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #e0f7fa;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #006064;
+    font-size: 14px;
+    padding: 20px 0;
+    background-color: #b2ebf2;
+    border-top: 2px solid #4dd0e1;
+}
+
+
+#drop-area {
+    border: 2px dashed #00838f;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+#drop-area.highlight {
+    background-color: #e0f7fa;
+    border-color: #006064;
+}
+
+#drop-area p {
+    margin: 0 0 10px;
+    font-size: 16px;
+    color: #00838f;
+}
+
+#choose-file {
+    display: inline-block;
+}
+
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    main {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    #image-container {
+        padding-bottom: 100%; 
+    }
+
+    #fish-count-overlay {
+        top: 10px;
+        right: 10px;
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+
+    #controls {
+        flex-direction: column;
+    }
+
+    button {
+        margin-bottom: 10px;
+        width: 100%;
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    #results {
+        font-size: 20px;
+        padding: 15px;
+        margin-top: 20px;
+    }
+
+    #drop-area {
+        padding: 15px;
+    }
+
+    #drop-area p {
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 400px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    #fish-count-overlay {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    button {
+        font-size: 13px;
+        padding: 8px 12px;
+    }
+
+    #results {
+        font-size: 18px;
+    }
+}
+
+
+@media (hover: none) {
+    button {
+        padding: 15px 20px; 
+    }
+
+    #drop-area {
+        padding: 25px; 
+    }
+}
